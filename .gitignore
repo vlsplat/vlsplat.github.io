@@ -1,0 +1,23 @@
+*.pdf
+__pycache__/
+/ScannetV2_point_data/
+/static/data/*
+!/static/data/2d/
+/static/data/2d/*
+!/static/data/2d/scannetpp/
+# gt.jpg is not loaded (ref.jpg already holds GT | RGB)
+/static/data/2d/scannetpp/*/*/gt.jpg
+!/static/data/3d/
+/static/data/3d/*
+!/static/data/3d/scannetv2/
+/static/data/3d/scannetv2/*
+!/static/data/3d/scannetv2/scene0070_00/
+!/static/data/3d/scannetv2/scene0200_00/
+!/static/data/3d/scannetv2/scene0590_00/
+
+# Local orbit rendering workspace (not published)
+/tools/local_orbit/
+!/static/data/3d/scannetv2/videos/
+
+# Offline data-prep scripts and their manifest (not needed by the web page)
+/tools/
