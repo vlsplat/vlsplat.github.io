@@ -50,12 +50,10 @@
     <div class="publication-links">
       <a class="link-btn" href="#" aria-disabled="true">
         <i class="fas fa-file-pdf"></i><span>Paper</span></a>
-      <a class="link-btn" href="#" aria-disabled="true">
+      <a class="link-btn" href="https://arxiv.org/abs/2611.01939" target="_blank" rel="noopener">
         <i class="ai ai-arxiv"></i><span>arXiv</span></a>
-      <a class="link-btn" href="#" aria-disabled="true">
-        <i class="fas fa-file-lines"></i><span>Supplementary</span></a>
-      <a class="link-btn" href="#" aria-disabled="true">
-        <i class="fab fa-github"></i><span>Code</span><em>soon</em></a>
+      <a class="link-btn" href="https://github.com/yuntaeJ/VLSplat" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i><span>Code</span></a>
     </div>
   </div>
 </header>
@@ -64,18 +62,12 @@
 <section class="section teaser-section">
   <div class="container is-max-desktop">
     <figure class="teaser">
-      <div class="qual-tabs" role="tablist">
-        <button class="pill is-active" role="tab" data-target="qual-render">Render-level · ScanNet++ &amp; Replica</button>
-        <button class="pill" role="tab" data-target="qual-point">Point-level · ScanNetV2</button>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/nFQ1EWjfIZo" title="VLSplat video"
+                loading="lazy" allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
-      <img id="qual-render" class="qual-img" src="static/images/qual_render.webp?v=final2"
-           alt="Qualitative render-level 3DGS semantic segmentation on ScanNet++ and Replica">
-      <img id="qual-point" class="qual-img" src="static/images/qual_point.webp?v=final2" hidden
-           alt="Qualitative 3D point-level semantic segmentation on ScanNetV2">
-      <figcaption>
-        <b>VLSplat</b> produces complete, category-aware objects where mask-lifting and language-field baselines
-        fragment or mislabel them — e.g. chair legs, desk surfaces and sofas recovered as whole objects.
-      </figcaption>
     </figure>
   </div>
 </section>
@@ -294,12 +286,6 @@
       el.innerHTML = items(palette);
     }
   });
-</script>
-<script>
-  document.querySelectorAll(".qual-tabs .pill").forEach(btn => btn.addEventListener("click", () => {
-    document.querySelectorAll(".qual-tabs .pill").forEach(b => b.classList.toggle("is-active", b === btn));
-    document.querySelectorAll(".qual-img").forEach(img => (img.hidden = img.id !== btn.dataset.target));
-  }));
 </script>
 <script type="module" src="static/js/hero.js"></script>
 <script type="module" src="static/js/compare2d.js"></script>
